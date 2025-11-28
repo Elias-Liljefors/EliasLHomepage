@@ -25,7 +25,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            /* justify-content: center; */
            /*  background: url('bg.jpg');
             background-size: 80%;
             background-repeat: no-repeat;
@@ -52,7 +52,7 @@
             padding: 20px;
             margin: 10px;
             width: 80%;
-            margin-top: 650px;
+            /* margin-top: 650px; */
             max-width: 800px;
             box-shadow: 0 6px 6px rgba(0, 0, 0, 0.281);
             background-color: rgba(0, 0, 0, 0.336);
@@ -90,7 +90,7 @@
         
         .headerTitle {
             color:#f9dbdb;
-            margin:0; 
+            /* margin:0;  */
             font-size:24px;
             text-decoration:none;
         }
@@ -107,7 +107,6 @@
             }
 
             main {
-                margin-top: 1300px !important;
                 width: 100%;
                 border-radius: 0px;
             }
@@ -116,7 +115,11 @@
             color: #f9dbdb;
             text-align: center;
             font-size: 16px;
-        }
+            }
+
+            body {
+                background-color: black;
+            }
 
             body::before {
             position: fixed;
@@ -157,7 +160,7 @@
     </header>
 
     <main>
-        <h2>Test header 2</h2>
+        <h2>Test header</h2>
         <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -190,22 +193,23 @@
         <p>&copy; 2025 Elias Liljefors</p>
     </footer>
 
-   <!--  <script>
-    (function keepContentBelowHeader(){
-      const header = document.querySelector('header');
-      if (!header) return;
-      function update(){
-        document.body.style.paddingTop = header.getBoundingClientRect().height + 'px';
-      }
-      update();
-      // update on header resize and window resize
-      if (window.ResizeObserver) {
-        new ResizeObserver(update).observe(header);
-      }
-      window.addEventListener('resize', update);
-      window.addEventListener('load', update);
-    })();
-    </script> -->
+    <script> /* Keep main content below the header */
+        (function keepContentBelowHeader(){
+        const header = document.querySelector('header');
+        const main = document.querySelector('main');
+        if (!header || !main) return;
+        function update(){
+            const headerHeight = header.getBoundingClientRect().height;
+            main.style.marginTop = headerHeight + 'px';
+        }
+        update();
+        if (window.ResizeObserver) {
+            new ResizeObserver(update).observe(header);
+        }
+        window.addEventListener('resize', update);
+        window.addEventListener('load', update);
+        })();
+    </script>
 
 </body>
 
