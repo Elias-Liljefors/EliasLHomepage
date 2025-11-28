@@ -40,7 +40,7 @@
             background: url('background.jpg') center/100% no-repeat;
             filter: blur(0px);
             background-color: black;
-            filter: brightness(80%);
+            filter: brightness(100%);
             z-index: -1;
             pointer-events: none;
             background-position: 25% 80% ;
@@ -99,6 +99,41 @@
             font-size: 0.9em;
             margin-bottom: 50px;
         }
+
+        @media (max-width: 767.98px) {
+            .text-content {
+            max-width: fit-content;
+            padding: 0 15px;
+            }
+
+            main {
+                margin-top: 1000px !important;
+                width: 100%;
+                border-radius: 0px;
+            }
+
+            p {
+            color: #f9dbdb;
+            text-align: center;
+            font-size: 16px;
+        }
+
+            body::before {
+            position: fixed;
+            inset: 0; /* top:0; right:0; bottom:0; left:0; */
+            background: url('background.jpg') center/300% no-repeat;
+            background-color: rgba(0, 0, 0, 0);
+            filter: brightness(100%);
+            background-position: 0% 80% ; 
+            }
+
+            .headerTitle {
+            color:#f9dbdb;
+            margin:0; 
+            font-size:14px;
+            text-decoration:none;
+            }
+        }
     </style>
 </head>
 
@@ -106,16 +141,17 @@
 
     <header>
         <div style="max-width:800px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:1rem;">
-            <div style="display:flex; align-items:center;">
-                <picture><img src="profilepic.jpg" alt="Profile" style="width: 40px; height: 40px; margin-right: 20px; border-radius: 50px; "></picture>
-                <a class="headerTitle" href="#home">Elias Liljefors</a>
-            </div>
-
-            <nav style="display:flex; gap:12px;">
-                <a href="#about" style="color:#f9dbdb; text-decoration:none; font-size:14px;">Home</a>
-                <a href="#about" style="color:#f9dbdb; text-decoration:none; font-size:14px;">About</a>
-                <a href="#projects" style="color:#f9dbdb; text-decoration:none; font-size:14px;">Projects</a>
-                <a href="#contact" style="color:#f9dbdb; text-decoration:none; font-size:14px;">Contact</a>
+            <nav style="display:flex; align-items:center; justify-content:space-between; gap:12px; width:100%;">
+                <div style="display:flex; align-items:center; gap:12px;">
+                    <picture><img src="profilepic.jpg" alt="Profile" style="width:40px;height:40px;border-radius:50%;"></picture>
+                    <a class="headerTitle" href="#home">Elias Liljefors</a>
+                </div>
+                <div style="display:flex; gap:12px; align-items:center;">
+                    <a href="#home" style="color:#f9dbdb; text-decoration:none; font-size:14px;">Home</a>
+                    <a href="#about" style="color:#f9dbdb; text-decoration:none; font-size:14px;">About</a>
+                    <a href="#projects" style="color:#f9dbdb; text-decoration:none; font-size:14px;">Projects</a>
+                    <a href="#contact" style="color:#f9dbdb; text-decoration:none; font-size:14px;">Contact</a>
+                </div>
             </nav>
         </div>
     </header>
