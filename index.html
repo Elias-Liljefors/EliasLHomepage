@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6WV703FKQ0"></script>
+
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-6WV703FKQ0');
     </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elias Liljefors Homepage</title>
@@ -20,31 +21,51 @@
         body {
             margin: 0;
             font-family: 'Josefin Sans', sans-serif;
-            background: url('background.jpg');
             height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            backdrop-filter: blur(30px);
-            background-color: rgba(0, 0, 0, 0.285);
-            background-blend-mode: overlay;
+           /*  background: url('bg.jpg');
+            background-size: 80%;
+            background-repeat: no-repeat;
+            backdrop-filter: blur(0px);
+            background-blend-mode: overlay; */
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0; /* top:0; right:0; bottom:0; left:0; */
+            background: url('background.jpg') center/100% no-repeat;
+            filter: blur(0px);
+            background-color: black;
+            filter: brightness(80%);
+            z-index: -1;
+            pointer-events: none;
+            background-position: 25% 80% ;
         }
 
         main {
-            background: rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(50px);
             border-radius: 15px;
             padding: 20px;
             margin: 10px;
             width: 80%;
+            margin-top: 650px;
             max-width: 800px;
             box-shadow: 0 6px 6px rgba(0, 0, 0, 0.281);
-            background-color: rgba(255, 255, 255, 0.146);
-            background-blend-mode: overlay;
+            background-color: rgba(0, 0, 0, 0.336);
         }
 
+
         h1 {
+            color: #f9dbdb;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        h2 {
             color: #f9dbdb;
             text-align: center;
             font-size: 40px;
@@ -56,35 +77,100 @@
             font-size: 20px;
         }
 
+        header {
+            position:sticky; 
+            top:0; 
+            width:100%; 
+            align-self:stretch; 
+            z-index:1000; 
+            backdrop-filter: blur(6px); 
+            background-color: rgba(0, 0, 0, 0.726); 
+            padding:12px 20px; 
+        }
+        
+        .headerTitle {
+            color:#f9dbdb;
+            margin:0; 
+            font-size:24px;
+            text-decoration:none;
+        }
+
         footer p {
             font-size: 0.9em;
+            margin-bottom: 50px;
         }
     </style>
 </head>
+
 <body>
+
     <header>
-        <h1>Welcome to My Website</h1>
+        <div style="max-width:800px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:1rem;">
+            <div style="display:flex; align-items:center;">
+                <picture><img src="profilepic.jpg" alt="Profile" style="width: 40px; height: 40px; margin-right: 20px; border-radius: 50px; "></picture>
+                <a class="headerTitle" href="#home">Elias Liljefors</a>
+            </div>
 
-        <div class="container" style="color: rgba(196, 190, 190, 0) !important;"> <!-- Container aloitus, hyödyntää bootstrappia -->
-            <nav class="navbar navbar-expand-lg bg-body-tertiary"> <!-- Navigaation aloitus -->
-                <form class="navbar-brand">
-                        <li class="nav-item" >
-                        <a class="nav-link active" aria-current="page" href="tietoa_meista.html">TIETOA MEISTÄ</a>
-                        </li>
-
-                        <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="ota_yhteytta.html">OTA YHTEYTTÄ</a>
-                        </li>
-                </form>
-        </div>    
-        
+            <nav style="display:flex; gap:12px;">
+                <a href="#about" style="color:#f9dbdb; text-decoration:none; font-size:14px;">Home</a>
+                <a href="#about" style="color:#f9dbdb; text-decoration:none; font-size:14px;">About</a>
+                <a href="#projects" style="color:#f9dbdb; text-decoration:none; font-size:14px;">Projects</a>
+                <a href="#contact" style="color:#f9dbdb; text-decoration:none; font-size:14px;">Contact</a>
+            </nav>
+        </div>
     </header>
+
     <main>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <h2>Test header 2</h2>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        <br><br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
     </main>
+
     <footer>
         <p>&copy; 2025 Elias Liljefors</p>
     </footer>
+
+    <script>
+    (function keepContentBelowHeader(){
+      const header = document.querySelector('header');
+      if (!header) return;
+      function update(){
+        document.body.style.paddingTop = header.getBoundingClientRect().height + 'px';
+      }
+      update();
+      // update on header resize and window resize
+      if (window.ResizeObserver) {
+        new ResizeObserver(update).observe(header);
+      }
+      window.addEventListener('resize', update);
+      window.addEventListener('load', update);
+    })();
+    </script>
+
 </body>
+
 </html>
