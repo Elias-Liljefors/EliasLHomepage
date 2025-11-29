@@ -38,6 +38,19 @@ main {
     background-color: rgba(0, 0, 0, 0.6);
     /* border-style: solid;
     border-color: black; */
+
+    /* Animation */
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 0.2s; /* Start after page loads */
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
@@ -104,6 +117,30 @@ footer p {
     z-index: 1;
     /* margin-bottom: 50px; */
 }
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: rgba(255, 255, 255, 0.24); /* Set a background color */
+  color: rgb(0, 0, 0); /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 100%; /* Rounded corners */
+  font-size: 10px; /* Increase font size */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.658);
+}
+
+#myBtn:hover {
+  background-color: rgba(255, 255, 255, 0.432); /* Add a dark-grey background on hover */
+}
+
+/* Mobile Styles */
 
 @media (max-width: 767.98px) {
     .text-content {
