@@ -35,7 +35,7 @@ main {
     /* margin-top: 650px; */
     max-width: 800px;
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.281);
-    background-color: rgba(0, 0, 0, 0.336);
+    background-color: rgba(0, 0, 0, 0.6);
     /* border-style: solid;
     border-color: black; */
 }
@@ -66,9 +66,22 @@ header {
     align-self:stretch; 
     z-index:1000; 
     backdrop-filter: blur(30px); 
-    background-color: rgba(0, 0, 0, 0.726); 
+    background-color: rgba(0, 0, 0, 0.6); 
     padding:12px 20px; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.516);
+}
+
+header nav {
+    display:flex; 
+    align-items:center; 
+    justify-content:space-between; 
+    gap:12px; width:100%; 
+    max-width:800px; 
+    margin:0 auto; 
+    display:flex; 
+    align-items:center; 
+    justify-content:space-between; 
+    gap:1rem;
 }
 
 .headerTitle {
@@ -78,8 +91,17 @@ header {
     text-decoration:none;
 }
 
+.footerContainer {
+    display:flex; flex-direction:column; align-items:center; margin-top:20px; margin-bottom:20px;
+}
+
+.footerLogos {
+    width:30px;height:30px;border-radius:50%;box-shadow: 0 0px 7px rgba(73, 158, 13, 0.598) ;
+}
+
 footer p {
     font-size: 0.9em;
+    z-index: 1;
     /* margin-bottom: 50px; */
 }
 
