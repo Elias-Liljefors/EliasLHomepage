@@ -33,7 +33,7 @@
 
         <h3>Häme University of Applied Sciences, HAMK</h3>
         
-        <br>
+    
         <p>
         Tradenomi, Information TechnologyTradenomi, Information Technology<br>
         elo 2024 – 2027<br><br>
@@ -56,57 +56,6 @@
     </main>
 
     <footer id="footer-placeholder"></footer>
-    
-    <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('header-placeholder').innerHTML = data);
-        
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
-    </script>
-
-    <script> /* Keep main content below the header */
-        (function keepContentBelowHeader(){
-        const header = document.querySelector('header');
-        const main = document.querySelector('main');
-        if (!header || !main) return;
-        function update(){
-            const headerHeight = header.getBoundingClientRect().height;
-            main.style.marginTop = headerHeight + 'px';
-        }
-        update();
-        if (window.ResizeObserver) {
-            new ResizeObserver(update).observe(header);
-        }
-        window.addEventListener('resize', update);
-        window.addEventListener('load', update);
-        })();
-    </script>
-
-    <script>
-        // Get the button:
-        let mybutton = document.getElementById("myBtn");
-
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.classList.add('show');
-            } else {
-                mybutton.classList.remove('show');
-            }
-        }
-
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        }
-    </script>
-
     <script src="scripts.js"></script>
 </body>
 
