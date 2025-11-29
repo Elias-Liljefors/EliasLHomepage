@@ -23,27 +23,8 @@
 </head>
 
 <body>
-    <!-- <div class="content--canvas"></div>
-    <header>
-        <div style="max-width:800px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:1rem;">
-            <nav style="display:flex; align-items:center; justify-content:space-between; gap:12px; width:100%;">
-                <div style="display:flex; align-items:center; gap:12px;">
-                    <picture><img src="images/profilepic.jpg" alt="Profile" style="width:40px;height:40px;border-radius:50%;"></picture>
-                    <a class="headerTitle" href="#home">Elias Liljefors</a>
-                </div>
-                <div style="display:flex; gap:12px; align-items:center;">
-                    <a href="#home" style="color:#f9dbdb; text-decoration:none; font-size:14px;">Home</a>
-                    <a href="#about" style="color:#f9dbdb; text-decoration:none; font-size:14px;">About</a>
-                    <a href="#projects" style="color:#f9dbdb; text-decoration:none; font-size:14px;">Projects</a>
-                    <a href="#contact" style="color:#f9dbdb; text-decoration:none; font-size:14px;">Contact</a>
-                </div>
-            </nav>
-        </div>
-    </header> -->
-
     <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="images/up.svg" style="width: 20px; height: 20px; opacity: 0.5;" alt=""></button>
     <header id="header-placeholder"></header>
-
 
     <main>
         <h2>Home</h2>
@@ -75,68 +56,8 @@
         </p>
     </main>
 
-    <!-- <footer>
-        <div style="display:flex; flex-direction:column; align-items:center; margin-top:20px; margin-bottom:20px;">
-            <p>&copy; 2025 Elias Liljefors</p>
-            <div style="display:flex; gap:15px;">
-                <picture><img src="images/github.webp" alt="Profile" style="width:30px;height:30px;border-radius:50%;box-shadow: 0 0px 7px rgba(73, 158, 13, 0.598) ;"></picture>
-                <picture><img src="images/linked.png" alt="Profile" style="width:30px;height:30px;border-radius:50%;box-shadow: 0 0px 7px rgba(73, 158, 13, 0.598) ;"></picture>
-            </div>
-        </div>
-    </footer> -->
-
     <footer id="footer-placeholder"></footer>
-    
-    <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('header-placeholder').innerHTML = data);
-        
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
-    </script>
-
-    <script> /* Keep main content below the header */
-        (function keepContentBelowHeader(){
-        const header = document.querySelector('header');
-        const main = document.querySelector('main');
-        if (!header || !main) return;
-        function update(){
-            const headerHeight = header.getBoundingClientRect().height;
-            main.style.marginTop = headerHeight + 'px';
-        }
-        update();
-        if (window.ResizeObserver) {
-            new ResizeObserver(update).observe(header);
-        }
-        window.addEventListener('resize', update);
-        window.addEventListener('load', update);
-        })();
-    </script>
-
-    <script>
-        // Get the button:
-        let mybutton = document.getElementById("myBtn");
-
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.classList.add('show');
-            } else {
-                mybutton.classList.remove('show');
-            }
-        }
-
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        }
-    </script>
-    <!-- <script src="background.js"></script> -->
+    <script src="scripts.js"></script>
 </body>
 
 </html>
