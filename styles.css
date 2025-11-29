@@ -26,6 +26,23 @@ body::before {
     background-position: 25% 80% ;
 }
 
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgb(0, 0, 0);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.116);
+    border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
 main {
     backdrop-filter: blur(30px);
     border-radius: 15px;
@@ -119,7 +136,7 @@ footer p {
 }
 
 #myBtn {
-  display: none; /* Hidden by default */
+  display: block; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
   bottom: 20px; /* Place the button at the bottom of the page */
   right: 30px; /* Place the button 30px from the right */
@@ -134,7 +151,19 @@ footer p {
   font-size: 10px; /* Increase font size */
   backdrop-filter: blur(10px);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.658);
+  opacity: 0; /* Start invisible */
+  visibility: hidden; /* Hide from screen readers when not visible */
+  transition: opacity 0.3s ease-in-out, visibility 0.3s;
+  pointer-events: none; /* Disable clicks when invisible */
+
 }
+
+#myBtn.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
 
 #myBtn:hover {
   background-color: rgba(255, 255, 255, 0.432); /* Add a dark-grey background on hover */
@@ -151,6 +180,8 @@ footer p {
 main {
     width: 100%;
     border-radius: 0px;
+    position: relative;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.6);
 }
 
 p {
