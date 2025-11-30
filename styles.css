@@ -43,12 +43,11 @@ body::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.5);
 }
 
-.contentContainer {
+.mainColumn {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
-    max-width: 800px;
 }
 
 main {
@@ -78,9 +77,14 @@ main {
     border-radius: 30px;
     padding: 20px;
     margin: 10px;
-    width: 100%;
+    width: 50%;
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.281);
     background: radial-gradient(circle at top, #3f4d27 0, rgba(26, 25, 25, 0.445) 60%);
+    max-width: 40%; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    margin: 50px 20px 10px;
 
     opacity: 0;
     transform: translateY(30px);
@@ -224,10 +228,17 @@ footer p {
 }
 
 main {
-    width: 100%;
+    backdrop-filter: blur(30px);
     border-radius: 0px;
-    position: relative;
-    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    margin: 0px;
+    width: 100%;
+    /* margin-top: 650px; */
+    max-width: auto;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.281);
+    background-color: rgba(0, 0, 0, 0.6);
+    /* border-style: solid;
+    border-color: black; */
 }
 
 p {
@@ -254,5 +265,37 @@ body::before {
     margin:0; 
     font-size:14px;
     text-decoration:none;
+}
+
+.card {
+    max-width: 90% !important; 
+    display: flex !important;
+    flex-direction: column; 
+    align-items: center !important; 
+    margin-top: 70px !important;
+    margin-bottom: 10px !important;
+
+    backdrop-filter: blur(30px);
+    border-radius: 30px;
+    padding: 20px;
+    margin: 0px;
+    width: 100%;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.281);
+    background: radial-gradient(circle at top, #3f4d27 0, rgba(26, 25, 25, 0.445) 60%); 
+}
+
+.cardName {
+    color: #f9dbdb;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.mainColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex;
+    width: 100%;
+    /* max-width: 500px; */
 }
 }
