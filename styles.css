@@ -55,6 +55,7 @@ main {
     border-radius: 15px;
     padding: 20px;
     margin: 10px;
+    margin-bottom: 30px;
     width: 80%;
     /* margin-top: 650px; */
     max-width: 800px;
@@ -72,19 +73,44 @@ main {
     animation-delay: 0.2s; /* Start after page loads */
 }
 
+.section {
+    backdrop-filter: blur(30px);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+    margin-bottom: 30px;
+    width: 80%;
+    /* margin-top: 650px; */
+    max-width: 800px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.281);
+    /* background: radial-gradient(circle at top, #3ec265 0, rgba(26, 25, 25, 0.445) 60%); */
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(105, 223, 140, 0.125);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .card {
     backdrop-filter: blur(30px);
     border-radius: 30px;
-    padding: 20px;
-    margin: 10px;
-    width: 50%;
+    padding: 30px 20px 30px 50px;
+    /* margin: 10px; */
+    /* width: 50%; */
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.281);
     background: radial-gradient(circle at top, #3f4d27 0, rgba(26, 25, 25, 0.445) 60%);
-    max-width: 40%; 
+    /* max-width: 80%;  */
+    max-width: 800px;
+    width: 80%;
     display: flex; 
-    flex-direction: column; 
+    flex-direction: row; 
     align-items: center; 
-    margin: 50px 20px 10px;
+    margin: 70px 0px 0px;
 
     opacity: 0;
     transform: translateY(30px);
@@ -92,11 +118,24 @@ main {
     animation-delay: 0.2s; /* Start after page loads */
 }
 
-.cardName {
+.cardTitle {
     color: #f9dbdb;
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.cardText {
+    color: #f9dbdb;
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.cardImage {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.281);
 }
 
 @keyframes fadeInUp {
@@ -114,7 +153,7 @@ h1 {
 
 h2 {
     color: #f9dbdb;
-    text-align: center;
+    text-align: left;
     font-size: 30px;
 }
 
@@ -145,31 +184,67 @@ header {
     background-color: rgba(0, 0, 0, 0.6); 
     padding:12px 20px; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.516);
+
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeInUp 0.8s ease-out both;
+    animation-delay: 0.2s; /* Start after page loads */
 }
 
 header nav {
     display:flex; 
-    align-items:center; 
     justify-content:space-between; 
     gap:12px; width:100%; 
     max-width:800px; 
     margin:0 auto; 
-    display:flex; 
     align-items:center; 
-    justify-content:space-between; 
-    gap:1rem;
 }
 
 .headerTitle {
     color:#f9dbdb;
     /* margin:0;  */
     font-size:24px;
-    text-decoration:none;
+    /* text-decoration:none; */
     font-weight: bold;
+    margin-top: 4px;
+}
+
+.headerTitle:hover, #headerLink:hover {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: #b1b1b1 !important;
+    /* background: linear-gradient(90deg, #a6a0b8, #439938);
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent; */
+}
+
+.headerTitle, #headerLink {
+    /* -webkit-text-fill-color: #f9dbdb; */
+    transition: transform 0.6s ease, color 0.8s ease, -webkit-text-fill-color 0.8s ease;
+}
+
+.headerPicture {
+    display: none;
+    /* margin:0;  */
+    margin-right: 5px;
+}
+
+/* body:has(.mainColumn) .headerTitle, body:has(.mainColumn) .headerPicture {
+    opacity: 0;
+}
+
+body:has(.mainColumn) nav {
+    display: flex;
+    margin: 0;
+} */
+
+body:has(.mainColumn) .headerLeft {
+    display: none;
 }
 
 .footerContainer {
-    display:flex; flex-direction:column; align-items:center; margin-top:20px; margin-bottom:20px;
+    display:flex; flex-direction:column; align-items:center; margin-top:20px; margin-bottom:30px;
 }
 
 .footerLogos {
@@ -179,41 +254,41 @@ header nav {
 footer p {
     font-size: 0.9em;
     z-index: 1;
-    /* margin-bottom: 50px; */
 }
 
-#myBtn {
-  display: block; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: rgba(255, 255, 255, 0.24); /* Set a background color */
-  color: rgb(0, 0, 0); /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 100%; /* Rounded corners */
-  font-size: 10px; /* Increase font size */
-  backdrop-filter: blur(10px);
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.658);
-  opacity: 0; /* Start invisible */
-  visibility: hidden; /* Hide from screen readers when not visible */
-  transition: opacity 0.3s ease-in-out, visibility 0.3s;
-  pointer-events: none; /* Disable clicks when invisible */
-
+#TopBtn {
+    display: block; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: rgba(255, 255, 255, 0.24); /* Set a background color */
+    color: rgb(0, 0, 0); /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 100%; /* Rounded corners */
+    font-size: 10px; /* Increase font size */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.658);
+    opacity: 0; /* Start invisible */
+    visibility: hidden; /* Hide from screen readers when not visible */
+    transition: opacity 0.3s ease-in-out, visibility 0.3s;
+    pointer-events: none; /* Disable clicks when invisible */
 }
 
-#myBtn.show {
+#TopBtn.show {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+    transition: background-color 0.2s ease-in-out;
 }
 
 
-#myBtn:hover {
-  background-color: rgba(255, 255, 255, 0.432); /* Add a dark-grey background on hover */
+#TopBtn:hover {
+    transition: background-color 0.2s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.432); /* Add a dark-grey background on hover */
 }
 
 
@@ -233,7 +308,7 @@ footer p {
     padding: 0 15px;
 }
 
-main {
+main, .section {
     backdrop-filter: blur(30px);
     border-radius: 0px;
     padding: 20px;
