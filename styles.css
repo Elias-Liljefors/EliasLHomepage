@@ -130,6 +130,11 @@ p {
     font-size: 16px;
 }
 
+a {
+    color: #a8e6a1;
+    text-decoration: none;
+}
+
 header {
     position:sticky; 
     top:0; 
@@ -265,12 +270,13 @@ body::before {
 
 header {
     background-color: rgba(0, 0, 0, 0.5); 
+    padding:18px 20px;
 }
 
 .headerTitle {
     color:#f9dbdb;
     margin:0; 
-    font-size:14px;
+    font-size:18px;
     text-decoration:none;
 }
 
