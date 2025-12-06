@@ -56,6 +56,6 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe all sections
-document.querySelectorAll('.section').forEach(section => {
+document.querySelectorAll('.section, .project-card, .hero').forEach(section => {
     observer.observe(section);
 });

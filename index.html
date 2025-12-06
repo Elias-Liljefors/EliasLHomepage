@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6WV703FKQ0"></script>
 
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6WV703FKQ0"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -14,10 +15,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elias Liljefors Homepage</title>
     <link rel="icon" type="image/png" href="images/favicon.ico">
+
+    <!-- Google Fonts -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poiret+One&display=swap" rel="stylesheet">
+
+    <!-- Own CSS-->
     <link rel="stylesheet" href="styles.css">
 
 </head>
@@ -28,7 +33,7 @@
 
     <div class="mainColumn">
         <div class="card">
-            <img class="cardImage" src="images/profilepic.jpg" alt="Elias Liljefors" style="width:30%; border-radius: 100%; margin-top: 24px; margin-bottom: 25px;">
+            <img class="cardImage" src="images/profilepic.jpg" alt="Elias Liljefors">
             <div>
                 <div class="cardTitle">
                     <b>Elias Liljefors</b> 
@@ -36,6 +41,10 @@
                 <div class="cardText">
                     <p>Hi! I’m an Information Technology student at HAMK. <br> My interests include IT support and practical technology solutions.</p>
                 </div>
+                <div>
+                    <button class="cardBtn" onclick="location.href='projects.html'">Check out my projects!</button>
+                </div>
+                
             </div>
         </div>
 
@@ -44,7 +53,6 @@
 
             <h3>Häme University of Applied Sciences, HAMK</h3>
             
-        
             <p>
             Tradenomi, Information TechnologyTradenomi, Information Technology<br>
             elo 2024 – 2027<br><br>
@@ -60,13 +68,42 @@
             • Utilizing SCRUM methodology during projects</p>
         </main>
 
-        <div class="section">
-            <h2>Projects</h2>
-            <p>oso</p>
+        <div class="hero">
+            <div class="heroContent">
+                <div class="heroTitle">
+                    <h2>Projects</h2>
+                </div>
+                <div class="card-grid">
+                    <article class="project-card">
+                        <img src="images/pa.png" alt="Microsoft Power Platform" class="project-img">
+                        <div class="project-info">
+                            <p class="project-title">Microsoft Power Platform</p>
+                            <p>Automating business processes and workflows with Microsoft Power Platform tools.</p>
+                            <a href="project1.html" class="project-link">View details</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <img src="images/df.png" alt="Another project" class="project-img">
+                        <div class="project-info">
+                            <p class="project-title">Design Factory Project</p>
+                            <p>HAMK Design Factory Project - Design Thinking and User Testing</p>
+                            <a href="project2.html" class="project-link">View details</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <img src="images/hcustoms.png" alt="Third project" class="project-img">
+                        <div class="project-info">
+                            <p class="project-title">Website Development</p>
+                            <p>Static websites, PHP programming and CMS</p>
+                            <a href="project3.html" class="project-link">View details</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </div>
 
         <div class="section">
-            <h2>Another one</h2>
+            <h2>Contact me!</h2>
             <p>oso</p>
         </div>
 
