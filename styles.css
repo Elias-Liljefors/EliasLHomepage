@@ -117,7 +117,7 @@ header nav {
     margin-top: 4px;
 }
 
-.headerTitle:hover, #headerLink:hover {
+.headerTitle:hover, .headerLink:hover {
     transform: translateY(-2px);
     transition: transform 0.3s ease, color 0.3s ease;
     color: #b1b1b1 !important;
@@ -127,7 +127,7 @@ header nav {
     -webkit-text-fill-color: transparent; */
 }
 
-.headerTitle, #headerLink {
+.headerTitle, .headerLink {
     /* -webkit-text-fill-color: #f9dbdb; */
     transition: transform 0.6s ease, color 0.8s ease, -webkit-text-fill-color 0.8s ease;
 }
@@ -155,6 +155,7 @@ header nav {
     text-decoration:none; 
     font-size:14px;
 }
+
 
 /* Footer */
 
@@ -200,6 +201,84 @@ main {
     transform: translateY(30px);
     animation: fadeInUp 0.8s ease-out forwards;
     animation-delay: 0.2s; /* Start after page loads */
+}
+
+.schoolCard {
+    color: #f9dbdb;
+    align-items: center;
+    border-radius: 15px;
+    margin-top: 70px;
+    margin-bottom: 0px;
+    padding: 20px;
+    max-width: 800px !important;
+    width: 800px;
+    backdrop-filter: blur(30px);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.281);
+    background-color: rgba(63, 55, 55, 0.6);
+    border: 1px solid rgba(105, 223, 140, 0.125);
+
+
+    /* Animation */
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 0.2s; /* Start after page loads */
+}
+
+.schoolDetailCard {
+    color: #f9dbdb;
+    align-items: center;
+    background-color:rgba(78, 55, 55, 0);
+    border-radius: 15px;
+    margin: 20px;
+    margin-top: 0px;
+    padding: 20px;
+}
+
+
+.skillCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.281);
+    background-color: rgba(63, 55, 55, 0.6);
+    border: 1px solid rgba(105, 223, 140, 0.125);
+    backdrop-filter: blur(30px);
+    color: #f9dbdb;
+
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+    margin-top: 0px;
+    
+    width: 253px;
+    height: 280px;
+
+    /* Animation */
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 0.2s; /* Start after page loads */
+}
+
+
+.skillCardDetail {
+    /* background-color: #588f3d96; */
+    background: radial-gradient(circle at top, #627e57 0, rgba(72, 170, 97, 0.445) 60%);
+    color: #f9dbdb;
+    border-radius: 15px;
+    padding: 40px;
+    margin: 10px;
+    text-align: center;
+    width: 160px;
+    height: 60px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(105, 223, 140, 0.125);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.281);
 }
 
 
@@ -255,10 +334,11 @@ main {
 
 .cardTitle {
     color: #f9dbdb;
-    font-size: 24px;
+    font-size: 34px;
     font-weight: bold;
     margin-bottom: 10px;
     margin-left: 30px;
+    letter-spacing: 2px;
 }
 
 .cardText {
@@ -332,6 +412,21 @@ main {
     margin-left: 20px;
     margin-bottom: 40px;
 }
+/* 
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+}
+
+.cardTitle h2::after {
+    content: "";
+    width: 3px;
+    height: 20px;
+    background: #ffffff;
+    display: inline-block;
+    animation: cursor-blink 1.5s steps(2) infinite;
+} */
 
 .heroContent {
     max-width: 800px;
@@ -367,7 +462,7 @@ main {
 .project-img {
     margin-top: 19px;
     width: 95%;
-    height: 300px;
+    height: 400px;
     object-fit: cover;
     object-position: center;
     align-self: center;
@@ -378,7 +473,7 @@ main {
 
 p.project-title {
     color: #f9dbdb;
-    font-size: 20px;
+    font-size: 26px;
     font-weight: bold;
     margin-bottom: 10px;
     margin-top: 10px;
@@ -544,7 +639,18 @@ body.error-page::before {
     transform: scale(1.05);
 }
 
-
+::selection
+{
+    background: rgb(141, 185, 113);
+    color: black;
+    text-shadow: none;
+}
+::-moz-selection
+{
+    background: rgb(141, 185, 113);
+    color: #EEE;
+    text-shadow: none;
+}
 
 
 
@@ -601,7 +707,8 @@ header nav {
     display:flex;
     flex-direction: column; 
     justify-content:space-between; 
-    gap:16px; width:100%; 
+    gap:16px; 
+    width:100%; 
     max-width:800px; 
     margin:0 auto; 
     align-items:center; 
@@ -616,7 +723,7 @@ header nav {
 
 .headerRight {
     display:flex; 
-    gap: 35px; 
+    gap: 30px; 
     align-items:center;
 }
 
