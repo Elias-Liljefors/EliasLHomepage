@@ -225,7 +225,7 @@ main {
     animation-delay: 0.2s; /* Start after page loads */
 }
 
-.schoolDetailCard {
+.skillCardContainer {
     color: #f9dbdb;
     align-items: center;
     background-color:rgba(78, 55, 55, 0);
@@ -233,6 +233,9 @@ main {
     margin: 20px;
     margin-top: 0px;
     padding: 20px;
+
+    display: grid; 
+    grid-template-columns: auto auto auto
 }
 
 
@@ -652,6 +655,32 @@ body.error-page::before {
     text-shadow: none;
 }
 
+.contact {
+    backdrop-filter: blur(30px);
+    border-radius: 0px;
+    padding: 20px;
+    margin: 0px;
+    width: 100%;
+    /* margin-top: 650px; */
+    max-width: auto;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.281);
+    background-color: rgba(0, 0, 0, 0.6);
+    border: #3f4d27 0px !important;
+    border-top: #3f4d27 1px solid;
+    /* border-style: solid;
+    border-color: black; */
+
+}
+
+.contactText {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
 
 
 
@@ -815,7 +844,7 @@ header nav {
 .mainColumn {
     display: flex;
     flex-direction: column;
-    align-items: flex;
+    align-items: center;
     width: 100%;
     /* max-width: 500px; */
 }
@@ -834,4 +863,91 @@ header nav {
 .errorTitle {
     font-size: 30px;
 }
+
+.schoolCard {
+    align-items: center;
+    border-radius: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 20px;
+    width: 100%;
+    max-width: 90% !important; 
+
+
+    /* Animation */
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 0.2s; /* Start after page loads */
+}
+
+.skillCardContainer {
+    align-self: none;
+    align-items: none;
+    margin: 0px;
+    margin-top: 10px;
+    padding: 0px;
+    width: 100%;
+    max-width: 90% !important;
+
+    display: flex;
+    flex-direction: column; 
+}
+
+
+.skillCard {
+    display: flex;
+    flex-direction: column;
+    align-items: none;
+    text-align: none;
+
+    border-radius: 15px;
+    padding: 20px;
+    /* margin: 10px; */
+    margin-top: 0px;
+    
+    width: 100%;
+    height: 280px;
+}
+
+
+.skillCardDetail {
+    /* background-color: #588f3d96; */
+    background: radial-gradient(circle at top, #627e57 0, rgba(72, 170, 97, 0.445) 60%);
+    color: #f9dbdb;
+    border-radius: 15px;
+    padding: 40px;
+    margin: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    height: 60px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(105, 223, 140, 0.125);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.281);
+}
+
+.contact {
+    backdrop-filter: blur(30px);
+    border-radius: 0px;
+    padding: 20px;
+    margin: 0px;
+    width: 100%;
+    /* margin-top: 650px; */
+    max-width: auto;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.281);
+    background-color: rgba(0, 0, 0, 0.6);
+    border: #3f4d27 0px !important;
+    border-top: #3f4d27 1px solid;
+    /* border-style: solid;
+    border-color: black; */
+}
+
+.contactText {
+    max-width: 800px;
+    text-align: center;
+}
+
 }
